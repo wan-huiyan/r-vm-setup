@@ -1,0 +1,32 @@
+# Install base R:
+sudo apt-get install r-base
+
+# Install wget:
+sudo apt-get install wget
+
+# Install RStudio for Debian 10 / Ubuntu 18 / Ubuntu 20 (check latest release)
+sudo apt-get install gdebi-core
+wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
+sudo gdebi rstudio-server-1.4.1717-amd64.deb
+
+# After installation you should be able to navigate a web browser to the following address to access the server:
+http://<server-ip>:8787
+
+
+
+# Install the Shiny R package before installing Shiny Server:
+sudo su - \
+-c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
+
+# Install shiny server: (check latest release)
+wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.16.958-amd64.deb
+sudo gdebi shiny-server-1.5.16.958-amd64.deb
+
+# After installation you should be able to navigate a web browser to the following address to access the shiny server:
+http://<server-ip>:3838
+
+
+
+# Before installing the common R packages:
+sudo apt-get install libxml2-dev
+sudo apt-get install libcurl4-openssl-dev
