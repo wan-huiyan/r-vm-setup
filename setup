@@ -30,3 +30,4 @@ http://<server-ip>:3838
 # Before installing the common R packages:
 sudo apt-get install libxml2-dev
 sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libssl-dev
